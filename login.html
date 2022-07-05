@@ -1,0 +1,213 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+ <body>
+  <style>
+   
+h2{
+ font-family: Sans-serif; 
+ font-size: 24px;     
+ font-style: normal; 
+ font-weight: bold; 
+ color: blue;
+ text-align: center; 
+ text-decoration: underline;
+}
+
+
+table{
+ font-family: verdana; 
+ color:black; 
+ font-size: 16px; 
+ font-style: normal;
+ font-weight: bold;
+ background: linear-gradient(to bottom, #efeff3 2%, #ededf0  100%);  
+ border-collapse: collapse; 
+ <!--border: 4px solid #000000;-->
+ border-style: dashed;
+}
+
+ 
+table.inner{
+ border: 10px
+}
+/*------------------------checkbox-----------------------*/
+.main {
+			display: block;
+			position: relative;
+			padding-left: 45px;
+			margin-bottom: 15px;
+			cursor: pointer;
+			font-size: 20px;
+		}
+		
+		/* Hide the default checkbox */
+		input[type=checkbox] {
+			visibility: hidden;
+		}
+		
+		/* Creating a custom checkbox
+		based on demand */
+		.skill {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 25px;
+			width: 25px;
+			background-color: rgb(61, 29, 36);
+		}
+		
+		/* Specify the background color to be
+		shown when hovering over checkbox */
+		.main:hover input ~ .skill {
+			background-color: rgb(209, 28, 97);
+		}
+		
+		/* Specify the background color to be
+		shown when checkbox is active */
+		.main input:active ~ .skill {
+			background-color: rgb(79, 201, 164);
+		}
+		
+		/* Specify the background color to be
+		shown when checkbox is checked */
+		.main input:checked ~ .skill {
+			background-color: rgb(0, 0, 0);
+		}
+		
+		/* Checkmark to be shown in checkbox */
+		/* It is not be shown when not checked */
+		.skill:after {
+			content: "";
+			position: absolute;
+			display: none;
+		}
+		
+		/* Display checkmark when checked */
+		.main input:checked ~ .skill:after {
+			display: block;
+		}
+		
+		
+		.main .skill:after {
+			left: 8px;
+			bottom: 5px;
+			width: 6px;
+			height: 12px;
+			border: solid rgb(44, 207, 145);
+			border-width: 0 4px 4px 0;
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+input[type=text], input[type=email], input[type=number]{
+ width: 50%;
+ padding: 6px 12px;
+ margin: 5px 0;
+ box-sizing: border-box;
+}
+
+input[type=submit], input[type=reset]{
+ width: 15%;
+ padding: 8px 12px;
+ margin: 5px 0;
+ box-sizing: border-box;
+}
+</style>
+</head>
+<body bgcolor="#C0C0C0">
+  <div class="container mt-3">
+    <form action="C:\Users\Mohan\Desktop\html\span.html" onsubmit="myFunction()">
+<table align="center" cellpadding = "30">
+<!--------------------- First Name ------------------------------------------>
+<tr>
+<td>Name</td>
+<td><div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text">@</span>
+  </div>
+  <input type="text" class="form-control" placeholder="Username" id="usr" name="username">
+</div>
+</td>
+<tr>
+<td>Email ID</td><td><div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Your Email" id="mail" name="email">
+  <div class="input-group-append">
+    <span class="input-group-text">@example.com</span>
+  </div>
+</div></td>
+</tr>
+
+<!-------------------------Address--------------------------------------->
+<tr>
+    <td>Address</td>
+    <td><textarea placeholder="Remember, be nice!" cols="30" rows="5"></textarea></td>
+</tr>
+<!---------------------- Gender ------------------------------------->
+<tr>
+<td>Gender</td>
+<td>
+<input type="radio" name="Gender" value="Male" />
+Male
+<input type="radio" name="Gender" value="Female" />
+Female
+</td>
+</tr>
+
+<!------------------------- Skill Set -------------------------------------->
+<tr>
+<td>Skill Set<br /><br /><br />
+
+  <label class="main">HTML
+    <input type="checkbox">
+    <span class="skill"></span>
+</label>
+  
+<label class="main">CSS
+    <input type="checkbox" >
+    <span class="skill"></span>
+</label>
+  
+<label class="main">JS
+    <input type="checkbox">
+    <span class="skill"></span>
+</label>
+<label class="main">JAVA
+  <input type="checkbox">
+  <span class="skill"></span>
+</label>
+<label class="main">SQL
+  <input type="checkbox">
+  <span class="skill"></span>
+</label>
+<label class="main">PYTHON
+  <input type="checkbox">
+  <span class="skill"></span>
+</label>
+</td>
+</tr>
+<!----------------------- Submit and Reset ------------------------------->
+<tr>
+<td colspan="2" align="center">
+<input type="submit" onclick="myFunction();">
+<input type="reset" value="Reset">
+</td>
+</tr>
+</table>
+</form>
+<script>
+  function myFunction() {
+    alert("The form was submitted");
+  }
+  </script>
+</div>
+</body>
+</html>
